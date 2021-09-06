@@ -75,6 +75,10 @@
     "subTopic": {
       "via": "secondaryPosts",
       "model": "topics"
+    },
+    "author": {
+      "via": "blogposts",
+      "model": "author"
     }
   }
 }

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "tags",
   "info": {
-    "name": "tags"
+    "name": "tags",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,9 +17,28 @@
       "unique": true
     },
     "blogposts": {
-      "collection": "blogposts",
       "via": "tags",
+      "collection": "blogposts",
       "dominant": true
+    },
+    "color": {
+      "type": "string",
+      "unique": false,
+      "default": "#F59E0B"
+    },
+    "metaDescription": {
+      "type": "string",
+      "required": false
+    },
+    "ogImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "Author",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "dp": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "about": {
+      "type": "richtext",
+      "maxLength": 200
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "behance": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "blogposts": {
+      "collection": "blogposts",
+      "via": "author"
+    },
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
+    }
+  }
+}

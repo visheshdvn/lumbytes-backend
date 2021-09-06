@@ -36,12 +36,12 @@
       "pluginOptions": {}
     },
     "blogposts": {
-      "collection": "blogposts",
-      "via": "topic"
+      "via": "topic",
+      "collection": "blogposts"
     },
     "secondaryPosts": {
-      "collection": "blogposts",
-      "via": "subTopic"
+      "via": "subTopic",
+      "collection": "blogposts"
     }
   }
 }
